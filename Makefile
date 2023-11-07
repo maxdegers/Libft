@@ -5,6 +5,7 @@ SOURCES = 	isalpha.c\
 			isprint.c\
 			strlen.c\
 			memset.c\
+			bzero.c\
 			
 OBJECTS = ${SOURCES:.c=.o}
 HEADER_FILE = libft.h
