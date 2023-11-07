@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/07 11:18:41 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/07 10:41:24 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/07 11:23:52 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdio.h>
+#include <ctype.h>
+#include "libft.h"
 
-int ft_isalpha(int c);
 
-#endif
+int main()
+{
+    printf("%i\n",ft_isalpha(122));
+    printf("%i\n",isalpha(122));
+    return 0;
+}

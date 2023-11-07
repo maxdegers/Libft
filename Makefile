@@ -1,31 +1,17 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mbrousse <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/06 15:47:36 by mbrousse          #+#    #+#              #
-#    Updated: 2023/11/06 16:23:09 by mbrousse         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-SOURCES =
-
+SOURCES = isalpha.c\
+		
 OBJECTS = ${SOURCES:.c=.o}
-
-HEADER = libft.h
-
+HEADER_FILE = libft.h
 NAME = libft.a
-
-LANGUAGE = cc
-
+CC = cc
 FLAGS =  -Wall -Wextra -Werror
 
-.c.o:
-	${LANGUAGE} ${FLAGS} -c $< -o ${<:.c=.o} ${HEADER}
+%.o:%.c  ${HEADER_FILE}
+	${CC} ${FLAGS} -c $< -o $@ -I ${HEADER_FILE}
+
 ${NAME}: ${OBJECTS}
 	ar -rc ${NAME} ${OBJECTS}
+
 all: ${NAME}
 
 clean:
@@ -35,3 +21,5 @@ fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
+
+.PHONY: all clean fclean re

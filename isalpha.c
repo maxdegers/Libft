@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   isalpha.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/07 11:18:41 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/07 10:23:24 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/07 11:03:57 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-int ft_isalpha(int c);
-
-#endif
+int ft_isalpha(int c)
+{
+    if (c >= 65 && c <= 90)
+    {
+        return (1);
+    }
+    else if (c >= 97 && c <= 122)
+    {
+        return (1);
+    }
+    else
+        return (0);
+}
