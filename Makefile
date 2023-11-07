@@ -6,7 +6,7 @@ SOURCES = 	isalpha.c\
 			strlen.c\
 			memset.c\
 			bzero.c\
-			
+			memcpy.c
 OBJECTS = ${SOURCES:.c=.o}
 HEADER_FILE = libft.h
 NAME = libft.a
