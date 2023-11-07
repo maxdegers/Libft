@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:49:06 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/07 15:23:52 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/07 15:56:36 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/07 17:28:58 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
-    
-    i = 0;
-    while (i < n)
+    if (src < dest)
     {
-        ((char *)s)[i] = '\0';
-        i++;
+        while (n--)
+           ((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
     }
+    else
+        ft_memcpy(dest, src, n);
+    return (dest);
 }
