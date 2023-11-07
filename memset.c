@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:41:24 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/07 14:09:11 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/07 14:10:01 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/07 14:27:21 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-int main()
+void *ft_memset(void *s, int c, size_t n)
 {
-    printf("%li\n",ft_strlen(NULL));
-    printf("%li\n",strlen(NULL));
-    return 0;
+    size_t i;
+    
+    i = 0;
+    while (i < n)
+    {
+        ((char *)s)[i] = c;
+        i++;
+    }
 }

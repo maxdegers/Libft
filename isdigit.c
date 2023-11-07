@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   isdigit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:41:24 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/07 14:09:11 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/07 13:09:57 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/07 13:14:58 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include "libft.h"
-
-int main()
+int ft_isdigit(int c)
 {
-    printf("%li\n",ft_strlen(NULL));
-    printf("%li\n",strlen(NULL));
-    return 0;
+    return (c > 47 && c < 58);
 }

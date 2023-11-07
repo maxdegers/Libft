@@ -1,5 +1,11 @@
-SOURCES = isalpha.c\
-		
+SOURCES = 	isalpha.c\
+			isdigit.c\
+			isalnum.c\
+			isascii.c\
+			isprint.c\
+			strlen.c\
+			memset.c\
+			
 OBJECTS = ${SOURCES:.c=.o}
 HEADER_FILE = libft.h
 NAME = libft.a
