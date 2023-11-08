@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:41:24 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/08 15:45:26 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/08 13:56:15 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/08 15:40:39 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-//34 obligatoire --> 9 bonnusse
-int main()
+
+char *ft_strrchr(const char *s, int c)
 {
-	printf("%d\n",ft_strlcpy());
-	printf("%d\n",strlcpy());
-	return 0;
-    
+    int i;
+    char *car;
+
+    i = ft_strlen((char *)s);
+    car = &((char *)s)[i];
+    while (i)
+    {
+        if (c == s[i])
+        {
+            return (&((char *)s)[i]);
+        }
+        i--;
+    }
+    if (c == 0)
+    {
+        return (((char *)s) + i);
+    }
+    return (0);
 }

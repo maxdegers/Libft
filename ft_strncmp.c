@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:41:24 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/08 15:45:26 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/09/17 19:50:24 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/08 14:46:53 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-//34 obligatoire --> 9 bonnusse
-int main()
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	printf("%d\n",ft_strlcpy());
-	printf("%d\n",strlcpy());
-	return 0;
-    
+	unsigned int	i;
+
+	i = 0;
+	while (i < n && (s1[i] || s2[i]))
+	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+		i++;
+	}
+	return (0);
 }
+

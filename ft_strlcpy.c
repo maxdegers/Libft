@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbrousse <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 13:50:39 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/09/19 08:38:28 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:44:37 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		i++;
 	return (i);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-
-int main()
-{
-	char    s2[] = "defghijkl";
-	char	s3[] = "abc";
-	printf("%d \n", ft_strlcpy(s3,s2,0));
-	printf("%s \n",s3);
-	return 0;
-}
-*/

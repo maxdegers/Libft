@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:41:24 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/08 15:45:26 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/08 14:48:22 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/08 15:15:48 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-//34 obligatoire --> 9 bonnusse
-int main()
+
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	printf("%d\n",ft_strlcpy());
-	printf("%d\n",strlcpy());
-	return 0;
-    
+    size_t i;
+
+    i = 0;
+    while (i < n)
+    {
+        if (((unsigned char *)s)[i] == ((unsigned char)c))
+        {
+            return (&((void *)s)[i]);
+        }
+        i++;
+    }
+    return (0);
 }
