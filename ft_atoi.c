@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 15:28:10 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/08 17:56:26 by mbrousse         ###   ########.fr       */
+/*   Created: 2023/11/08 18:03:02 by mbrousse          #+#    #+#             */
+/*   Updated: 2023/11/08 18:16:41 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int ft_atoi(const char *nptr)
 {
-    size_t i;
-    
-    i = 0;
-    while (i < n)
+    int	i;
+	int	tab;
+	int	sign;
+
+	i = 0;
+	tab = 0;
+	while (((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32) && nptr[i])
+		i++;
+    sign = 1;
+	if (nptr[i] == '-')
+    {
+        sign *= -1;
+        i++;
+    }
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
-		{
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
-		}
+		tab = tab * 10;
+		tab += (nptr[i] - '0');
 		i++;
 	}
-	return (0);
+	return (tab * sign);
 }

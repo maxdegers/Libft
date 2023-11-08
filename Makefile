@@ -18,8 +18,8 @@ SOURCES = 	ft_isalpha.c\
 			ft_memchr.c\
 			ft_memcmp.c\
 			ft_strnstr.c\
-			
-			
+			ft_atoi.c\
+
 OBJECTS = ${SOURCES:.c=.o}
 
 HEADER_FILE = libft.h
