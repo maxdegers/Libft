@@ -31,7 +31,7 @@ CC = cc
 FLAGS =  -Wall -Wextra -Werror
 
 %.o:%.c  ${HEADER_FILE}
-	${CC} ${FLAGS} -c $< -o $@ -I ${HEADER_FILE}
+	${CC} ${FLAGS} -c $< -o $@ -I .
 
 ${NAME}: ${OBJECTS}
 	ar -rc ${NAME} ${OBJECTS}
