@@ -6,14 +6,14 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/08 18:02:30 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/08 22:16:24 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdio.h>
-
+//Part 1
 int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);
@@ -34,4 +34,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n); // bug
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strnstr(const char *  s1 , const char *  s2 , size_t  len );
+//malloc
+void *calloc(size_t nmemb, size_t size);
 #endif

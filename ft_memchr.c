@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:48:22 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/08 15:15:48 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/08 22:13:16 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void *ft_memchr(const void *s, int c, size_t n)
     {
         if (((unsigned char *)s)[i] == ((unsigned char)c))
         {
-            return (&((void *)s)[i]);
+            return ((void *)&((unsigned char *)s)[i]);
         }
         i++;
     }
