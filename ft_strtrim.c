@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:59:43 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 12:24:43 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:00:57 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char *ft_strtrim(char const *s1, char const *set)
     if (!s1 || !set)
         return (NULL);
     start = 0;
+    i = 0;
     end = ft_strlen(s1);
     ft_movstart(&start, s1, set);
     ft_movend(&end, s1, set);

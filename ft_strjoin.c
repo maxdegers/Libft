@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:23:44 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 11:41:51 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:00:13 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_sizetot(char const *s1, char const *s2)
 	return (size_tot);
 }
 
-void	ft_join(int *j, char *str, char *des)
+void	ft_join(int *j, char const *str, char *des)
 {
 	int	i;
 

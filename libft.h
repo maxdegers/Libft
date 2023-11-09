@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 12:25:15 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:11:25 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,17 @@ int             ft_toupper(int c);
 int             ft_tolower(int c);
 char            *ft_strchr(const char *s, int c); // bug
 char            *ft_strrchr(const char *s, int c); // bug
-int	            ft_strncmp(char *s1, char *s2, unsigned int n); // bug
+int             ft_strncmp(const char *s1, const char *s2, size_t n);
 void            *ft_memchr(const void *s, int c, size_t n);
 int             ft_memcmp(const void *s1, const void *s2, size_t n);
 char            *ft_strnstr(const char *  s1 , const char *  s2 , size_t  len );
-//malloc
+int             ft_atoi(const char *nptr);
 void            *ft_calloc(size_t nmemb, size_t size);
 char            *ft_strdup(const char *s);
 //Part 2
-char            *ft_substr(char const *s, unsigned int start, size_t len);
+char            *ft_substr(char const *s, unsigned int start, size_t len);//bug
 char            *ft_strjoin(char const *s1, char const *s2);
-char            *ft_strtrim(char const *s1, char const *set);
-
+char            *ft_strtrim(char const *s1, char const *set);//bug
+char            **ft_split(char const *s, char c); // securiser les malloc
+char            *ft_itoa(int n);
 #endif
