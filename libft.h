@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 16:56:29 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:08:44 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ char            *ft_strjoin(char const *s1, char const *s2);
 char            *ft_strtrim(char const *s1, char const *set);//bug
 char            **ft_split(char const *s, char c); // securiser les malloc
 char            *ft_itoa(int n);
+char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
