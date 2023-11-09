@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 11:02:48 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:25:15 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,7 @@ void            *ft_calloc(size_t nmemb, size_t size);
 char            *ft_strdup(const char *s);
 //Part 2
 char            *ft_substr(char const *s, unsigned int start, size_t len);
+char            *ft_strjoin(char const *s1, char const *s2);
+char            *ft_strtrim(char const *s1, char const *set);
+
 #endif
