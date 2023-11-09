@@ -19,6 +19,9 @@ SOURCES = 	ft_isalpha.c\
 			ft_memcmp.c\
 			ft_strnstr.c\
 			ft_atoi.c\
+			ft_calloc.c\
+			ft_strdup.c\
+			ft_substr.c\
 
 OBJECTS = ${SOURCES:.c=.o}
 
@@ -31,7 +34,7 @@ CC = cc
 FLAGS =  -Wall -Wextra -Werror
 
 %.o:%.c  ${HEADER_FILE}
-	${CC} ${FLAGS} -c $< -o $@ -I .
+	${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJECTS}
 	ar -rc ${NAME} ${OBJECTS}
