@@ -32,8 +32,12 @@ SOURCES = 	ft_isalpha.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c\
+
+BONUS_SOURCES = ft_test.c\
 			
 OBJECTS = ${SOURCES:.c=.o}
+
+BONUS_OBJECTS= ${BONUS_SOURCES:.c=.o}
 
 HEADER_FILE = libft.h
 
@@ -59,4 +63,8 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus : ${OBJECTS} ${BONUS_OBJECTS}
+	ar -rc ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
+
+
+.PHONY: all clean fclean re bonus

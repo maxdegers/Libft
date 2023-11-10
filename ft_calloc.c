@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 22:15:08 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 17:10:38 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:06:08 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void *ft_calloc(size_t nmemb, size_t size)
 {
     void    *ptr;
 
-    ptr = (void *)malloc(nmemb * size);
+    ptr = malloc(nmemb * size);
     if (!ptr)
-    {
         return (NULL);
-    }
-    ft_bzero(ptr, nmemb);
+    if (size == 0)
+        return (ptr);
+    ft_bzero(ptr, nmemb* size);
     return (ptr);
 }
