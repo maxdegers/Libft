@@ -59,10 +59,10 @@ ${NAME}: ${OBJECTS}
 all: ${NAME}
 
 clean:
-	rm -f ${OBJECTS}
+	@rm -f ${OBJECTS} ${BONUS_OBJECTS}
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re: fclean all
 

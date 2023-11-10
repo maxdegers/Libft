@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:59:43 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 14:00:57 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:24:52 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void ft_movstart(int *start, char const *s1, char const *set)
 
 void ft_movend(int *end, char const *s1, char const *set)
 {
-       while (ft_is(s1[*end], set) == 1)
+    while (ft_is(s1[*end], set) == 1)
         *end-= 1;
 }
 
@@ -49,13 +49,14 @@ char *ft_strtrim(char const *s1, char const *set)
         return (NULL);
     start = 0;
     i = 0;
-    end = ft_strlen(s1);
+    end = ft_strlen(s1) - 1;
     ft_movstart(&start, s1, set);
-    ft_movend(&end, s1, set);
-    f = malloc(sizeof(char) * ((end - start) + 1));
+    if (start != end + 1)
+       ft_movend(&end, s1, set);
+    f = malloc(sizeof(char) * ((end - start) + 2));
     if (!f)
         return(NULL);
-    while (start < end)
+    while (start <= end)
     {
         f[i] = s1[start];
         i++;
