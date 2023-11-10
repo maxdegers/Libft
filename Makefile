@@ -36,6 +36,8 @@ SOURCES = 	ft_isalpha.c\
 BONUS_SOURCES = ft_lstnew.c\
 			ft_lstadd_front.c\
 			ft_lstsize.c\
+			ft_lstlast.c\
+			ft_lstadd_back.c\
 			
 			
 OBJECTS = ${SOURCES:.c=.o}
@@ -59,10 +61,10 @@ ${NAME}: ${OBJECTS}
 all: ${NAME}
 
 clean:
-	@rm -f ${OBJECTS} ${BONUS_OBJECTS}
+	rm -f ${OBJECTS} ${BONUS_OBJECTS}
 
 fclean: clean
-	@rm -f ${NAME}
+	rm -f ${NAME}
 
 re: fclean all
 

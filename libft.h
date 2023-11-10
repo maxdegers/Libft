@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/10 14:01:23 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:24:08 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,7 @@ void            ft_putnbr_fd(int n, int fd);
 t_list          *ft_lstnew(void *content);
 void            ft_lstadd_front(t_list **lst, t_list *new);
 int             ft_lstsize(t_list *lst);
+t_list          *ft_lstlast(t_list *lst);
+void            ft_lstadd_back(t_list **lst, t_list *new);
+
 #endif
