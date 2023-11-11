@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 15:07:26 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/11 18:15:01 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:21:46 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	while (lst)
 	{
-		new = ft_lstnew(f(lst->content))
+		new = ft_lstnew(f(lst->content));
 	}
 	
 }
