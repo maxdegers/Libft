@@ -41,7 +41,7 @@ BONUS_SOURCES = ft_lstnew.c\
 			ft_lstdelone.c\
 			ft_lstclear.c\
 			ft_lstiter.c\
-			
+
 			
 OBJECTS = ${SOURCES:.c=.o}
 
@@ -58,7 +58,7 @@ FLAGS =  -Wall -Wextra -Werror
 %.o:%.c  ${HEADER_FILE}
 	${CC} ${FLAGS} -c $< -o $@
 
-${NAME}: ${OBJECTS}
+${NAME}: ${OBJECTS} Makefile
 	ar -rc ${NAME} ${OBJECTS}
 
 all: ${NAME}
@@ -71,7 +71,7 @@ fclean: clean
 
 re: fclean all
 
-bonus : ${OBJECTS} ${BONUS_OBJECTS}
+bonus : ${OBJECTS} ${BONUS_OBJECTS} Makefile
 	ar -rc ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
 
 
