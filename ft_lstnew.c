@@ -6,20 +6,20 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:26:02 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/10 13:45:46 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:02:38 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-    t_list *node;
-    
-    node = malloc(sizeof(t_list));
-    if (!node)
-        return(NULL);
-    node->content = content;
-    node->next = NULL;
-    return (node);
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
