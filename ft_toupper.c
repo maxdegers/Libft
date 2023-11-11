@@ -6,15 +6,15 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:39:59 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/08 14:29:38 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:51:02 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c > 96 && c < 123 )
-    {
-        return (c - 32);
-    }
-    return (c);
+	if (c > 96 && c < 123)
+	{
+		return (c - 32);
+	}
+	return (c);
 }
