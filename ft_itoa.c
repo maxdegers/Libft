@@ -6,24 +6,24 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:11:38 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/11 18:55:47 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/11 21:43:39 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_recc(long int nb, long int *cont)
+void	ft_nb_len(long int nb, long int *cont)
 {
 	if (nb < 0)
 	{
 		*cont += 1;
-		ft_recc(nb * -1, cont);
+		ft_nb_len(nb * -1, cont);
 	}
 	else if (nb >= 10)
 	{
-		ft_recc(nb / 10, cont);
-		ft_recc(nb % 10, cont);
+		ft_nb_len(nb / 10, cont);
+		ft_nb_len(nb % 10, cont);
 	}
 	else
 	{
@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 	long int	cont;
 
 	cont = 0;
-	ft_recc(n, &cont);
+	ft_nb_len(n, &cont);
 	str = malloc(sizeof(char) * cont + 1);
 	if (!str)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:55:55 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 15:12:32 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/11 21:47:49 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char **ft_split(char const *s, char c)
 	i = 0;
 	size = ft_countword(s, c);
 	tab = malloc(sizeof(char *) * (size + 1));
+	if (!tab)
+		return (NULL);
 	while (s[i])
 	{
 		size = i;
