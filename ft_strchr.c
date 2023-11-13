@@ -6,13 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:51:27 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/10 16:49:28 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:11:35 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -25,6 +25,5 @@ char *ft_strchr(const char *s, int c)
 	{
 		return (((char *)s) + i);
 	}
-	
 	return (0);
 }

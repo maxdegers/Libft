@@ -6,22 +6,22 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:24 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/11 18:35:27 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:55:50 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if (c >= 65 && c <= 90)
-    {
-        return (1);
-    }
-    else if (c >= 97 && c <= 122)
-    {
-        return (1);
-    }
-    else
-        return (0);
+	if (c >= 65 && c <= 90)
+	{
+		return (1);
+	}
+	else if (c >= 97 && c <= 122)
+	{
+		return (1);
+	}
+	else
+		return (0);
 }

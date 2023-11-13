@@ -6,18 +6,18 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:11:11 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/09 17:21:09 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:56:11 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (s[i])
 	{
-        f(i,&s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
