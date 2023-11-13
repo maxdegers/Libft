@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:55:55 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/11 21:47:49 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:41:55 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,33 +56,49 @@ int	ft_countword(char const *str, char ca)
 	return (c);
 }
 
-char **ft_split(char const *s, char c)
+int	ft_mallloc_com(char const *s, int *arg, char **tab, char c)
 {
-	int		j;
-	int		i;
-	int		size;
+	while (s[arg[2]] && ft_charcmp(s[arg[2]], c) == 0)
+		arg[2] += 1;
+	tab[arg[0]] = malloc(sizeof(char) * (arg[2] - arg[1] + 1));
+	if (!tab[arg[0]])
+	{
+		arg[1] = 0;
+		while (arg[1] != arg[0])
+		{
+			free(tab[arg[1]]);
+			arg[1]++;
+		}
+		free(tab);
+		return (0);
+	}
+	ft_strncpy(tab[arg[0]++], &s[arg[1]], arg[2] - arg[1]);
+	arg[1] = arg[2];
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		arg[3];
 	char	**tab;
 
-	j = 0;
-	i = 0;
-	size = ft_countword(s, c);
-	tab = malloc(sizeof(char *) * (size + 1));
+	arg[0] = 0;
+	arg[1] = 0;
+	arg[2] = ft_countword(s, c);
+	tab = malloc(sizeof(char *) * (arg[2] + 1));
 	if (!tab)
 		return (NULL);
-	while (s[i])
+	while (s[arg[1]])
 	{
-		size = i;
-		if (ft_charcmp(s[i], c) == 0)
+		arg[2] = arg[1];
+		if (ft_charcmp(s[arg[1]], c) == 0)
 		{
-			while (s[size] && ft_charcmp(s[size], c) == 0)
-				size++;
-			tab[j] = malloc(sizeof(char) * (size - i + 1));
-			ft_strncpy(tab[j++], &s[i], size - i);
-			i = size;
+			if (ft_mallloc_com(s, arg, tab, c) == 0)
+				return (NULL);
 		}
 		else
-			i++;
+			arg[1]++;
 	}
-	tab[j] = NULL;
+	tab[arg[0]] = NULL;
 	return (tab);
 }
