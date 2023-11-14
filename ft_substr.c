@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:41:54 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/14 11:58:11 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/14 12:09:10 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		j++;
 	}
 	str[j] = '\0';
-
 	return (str);
 }
