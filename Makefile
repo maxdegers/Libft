@@ -71,8 +71,8 @@ fclean: clean
 
 re: fclean all
 
-bonus : ${OBJECTS} ${BONUS_OBJECTS} Makefile
-	ar -rc ${NAME} ${OBJECTS} ${BONUS_OBJECTS}
+bonus : 
+	@make SOURCES="$(SOURCES) $(BONUS_SOURCES)"
 
 
 .PHONY: all clean fclean re bonus
