@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:55:55 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/13 17:41:55 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/14 09:57:10 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_charcmp(char c, char ca)
 	return (0);
 }
 
-void	ft_strncpy(char *dest, char const *src, int n)
+void	ft_strncpy_c(char *dest, char const *src, int n)
 {
 	int	i;
 
@@ -72,7 +72,7 @@ int	ft_mallloc_com(char const *s, int *arg, char **tab, char c)
 		free(tab);
 		return (0);
 	}
-	ft_strncpy(tab[arg[0]++], &s[arg[1]], arg[2] - arg[1]);
+	ft_strncpy_c(tab[arg[0]++], &s[arg[1]], arg[2] - arg[1]);
 	arg[1] = arg[2];
 	return (1);
 }
