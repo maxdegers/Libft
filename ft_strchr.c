@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:51:27 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/13 17:11:35 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:32:11 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
+	if (c < 0 || c > 255) {
+        return (0);
+    }
 	i = 0;
 	while (s[i])
 	{
@@ -27,3 +30,4 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
+

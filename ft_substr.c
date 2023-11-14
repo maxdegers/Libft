@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:41:54 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/13 17:14:56 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:11:33 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	char	*str;
 
-	if (!s)
-		return (NULL);
+	if (!s || *s == '\0')
+	{
+		str = malloc(1);
+		if (str)
+			*str = '\0';
+		return (str);
+	}
 	s_len = ft_strlen(s);
 	if (start > len)
 		start = s_len;
