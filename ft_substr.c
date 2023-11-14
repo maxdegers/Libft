@@ -6,54 +6,34 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:41:54 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/13 22:11:33 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/14 11:58:11 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	s_len;
+	size_t	i;
+	size_t	j;
 	char	*str;
 
-	if (!s || *s == '\0')
-	{
-		str = malloc(1);
-		if (str)
-			*str = '\0';
-		return (str);
-	}
-	s_len = ft_strlen(s);
-	if (start > len)
-		start = s_len;
-	if (start + len > s_len)
-		len = s_len - start;
+	i = 0;
+	while ((unsigned char)s[i] && i != start)
+		i++;
+	if (len > ft_strlen(s) - i)
+		len = ft_strlen(s) - i;
 	str = malloc(sizeof(char) * (len + 1));
-	if (str != NULL)
-	{
-		ft_strncpy(str, s + start, len);
-		str[len] = '\0';
-	}
-	else
+	if (str == NULL)
 		return (NULL);
+	j = 0;
+	while (j < len)
+	{
+		str[j] = s[i];
+		i++;
+		j++;
+	}
+	str[j] = '\0';
+
 	return (str);
 }
