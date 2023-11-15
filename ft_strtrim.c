@@ -6,13 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:59:43 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/13 17:09:57 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:43:26 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is(char c, char const *set)
+static int	ft_is(char c, char const *set)
 {
 	size_t	i;
 
@@ -26,13 +26,13 @@ int	ft_is(char c, char const *set)
 	return (0);
 }
 
-void	ft_movstart(int *start, char const *s1, char const *set)
+static void	ft_movstart(int *start, char const *s1, char const *set)
 {
 	while (ft_is(s1[*start], set) == 1)
 		*start += 1;
 }
 
-void	ft_movend(int *end, char const *s1, char const *set)
+static void	ft_movend(int *end, char const *s1, char const *set)
 {
 	while (ft_is(s1[*end], set) == 1)
 		*end -= 1;

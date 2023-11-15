@@ -6,14 +6,14 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:11:38 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/11 21:43:39 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:47:22 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_nb_len(long int nb, long int *cont)
+static void	ft_nb_len(long int nb, long int *cont)
 {
 	if (nb < 0)
 	{
@@ -31,7 +31,7 @@ void	ft_nb_len(long int nb, long int *cont)
 	}
 }
 
-void	ft_rec(long int nb, char *str, long int *i)
+static void	ft_rec(long int nb, char *str, long int *i)
 {
 	if (nb < 0)
 	{

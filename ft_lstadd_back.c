@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:23:30 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/13 17:01:41 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:55:17 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*pt;
 
+	if (!new || !lst)
+		return ;
 	if (!*lst)
 	{
 		*lst = new;

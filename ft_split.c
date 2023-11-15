@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:55:55 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/14 09:57:10 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:46:27 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 #include <stdlib.h>
 
-int	ft_charcmp(char c, char ca)
+static int	ft_charcmp(char c, char ca)
 {
 	if (c == ca)
 		return (1);
 	return (0);
 }
 
-void	ft_strncpy_c(char *dest, char const *src, int n)
+static void	ft_strncpy_c(char *dest, char const *src, int n)
 {
 	int	i;
 
@@ -34,7 +34,7 @@ void	ft_strncpy_c(char *dest, char const *src, int n)
 	dest[i] = '\0';
 }
 
-int	ft_countword(char const *str, char ca)
+static int	ft_countword(char const *str, char ca)
 {
 	int	i;
 	int	c;
@@ -56,7 +56,7 @@ int	ft_countword(char const *str, char ca)
 	return (c);
 }
 
-int	ft_mallloc_com(char const *s, int *arg, char **tab, char c)
+static int	ft_mallloc_com(char const *s, int *arg, char **tab, char c)
 {
 	while (s[arg[2]] && ft_charcmp(s[arg[2]], c) == 0)
 		arg[2] += 1;
@@ -82,6 +82,8 @@ char	**ft_split(char const *s, char c)
 	int		arg[3];
 	char	**tab;
 
+	if (!s)
+		return (NULL);
 	arg[0] = 0;
 	arg[1] = 0;
 	arg[2] = ft_countword(s, c);

@@ -6,11 +6,9 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:24 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/13 16:55:50 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:39:28 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {
