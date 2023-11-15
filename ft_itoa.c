@@ -6,12 +6,11 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:11:38 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/15 10:47:22 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:08:59 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	ft_nb_len(long int nb, long int *cont)
 {

@@ -6,15 +6,15 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:23:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/11/15 11:00:35 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:11:12 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
